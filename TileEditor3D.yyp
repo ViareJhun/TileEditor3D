@@ -52,6 +52,7 @@
     {"id":{"name":"fnt_gm_gui","path":"fonts/fnt_gm_gui/fnt_gm_gui.yy",},"order":0,},
     {"id":{"name":"obj_list_template","path":"objects/obj_list_template/obj_list_template.yy",},"order":4,},
     {"id":{"name":"obj_check_box_uv_map","path":"objects/obj_check_box_uv_map/obj_check_box_uv_map.yy",},"order":8,},
+    {"id":{"name":"obj_entry_scale","path":"objects/obj_entry_scale/obj_entry_scale.yy",},"order":14,},
     {"id":{"name":"obj_button_scale","path":"objects/obj_button_scale/obj_button_scale.yy",},"order":6,},
     {"id":{"name":"obj_label_tex_path","path":"objects/obj_label_tex_path/obj_label_tex_path.yy",},"order":0,},
     {"id":{"name":"array_get_index","path":"scripts/array_get_index/array_get_index.yy",},"order":10,},

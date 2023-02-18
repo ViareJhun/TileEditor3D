@@ -6,3 +6,4 @@ entry_create(
 )
 
 tag = "x"
+widget_entry_real_only_func = global.string_digits_real

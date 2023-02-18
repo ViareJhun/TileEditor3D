@@ -5,5 +5,5 @@ entry_create(
 	true
 )
 
-tag = "x_angle"
+tag = "x_scale"
 widget_entry_real_only_func = global.string_digits_real

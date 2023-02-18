@@ -440,6 +440,7 @@ function entry_create_ext(x, y, width, height, text, real_only) {
 	widget_entry_selected = false
 	widget_surf = -1
 	widget_entry_real_only = real_only
+	widget_entry_real_only_func = string_digits
 }
 
 function entry_create(text, real_only) {
@@ -473,7 +474,7 @@ function entry_update() {
 			widget_entry_selected = false
 			
 			if widget_entry_real_only {
-				widget_entry_text = string_digits(widget_entry_text)
+				widget_entry_text = widget_entry_real_only_func(widget_entry_text)
 			}
 		}
 	}
@@ -491,7 +492,7 @@ function entry_update() {
 		keyboard_string = ""
 		
 		if widget_entry_real_only {
-			widget_entry_text = string_digits(widget_entry_text)
+			widget_entry_text = widget_entry_real_only_func(widget_entry_text)
 		}
 	}
 }

@@ -87,6 +87,29 @@ function entry_angle_update(trans) {
 	}
 }
 
+function entry_scale_update(trans) {
+	with obj_entry_scale {
+		if (!widget_entry_selected) {
+			widget_entry_text = string(
+				variable_struct_get(
+					trans,
+					tag
+				)
+			)
+		} else {
+			var value = global.string_digits_real(widget_entry_text);
+			
+			variable_struct_set(
+				trans,
+				tag,
+				value
+			)
+			
+			with obj_editor slider_transform_update(trans)
+		}
+	}
+}
+
 function slider_transform_update(trans) {
 	with obj_slider_transformations {
 		switch tag {
