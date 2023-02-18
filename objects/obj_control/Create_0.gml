@@ -39,6 +39,9 @@ global.tile_ya_max = 180
 global.tile_za_min = -180
 global.tile_za_max = 180
 
+global.shininess_min = 2
+global.shininess_max = 256
+
 global.tile_object_x_start = 8
 global.tile_object_y_start = 8
 global.tile_object_z_start = 0

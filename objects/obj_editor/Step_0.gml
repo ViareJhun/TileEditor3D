@@ -12,13 +12,25 @@ global.tile_uv_tex = obj_check_box_uv_map.widget_value
 
 if global.tile_tex_main != noone {
 	global.tile_tex_main.specular = obj_slider_specular.widget_value
+	global.tile_tex_main.specular_blur = lerp(
+		global.shininess_min,
+		global.shininess_max,
+		obj_slider_shininess.widget_value
+	)
 }
 if obj_list_textures.widget_data_selected != -1 {
-	texture_manager_get(
+	var tex = texture_manager_get(
 		obj_list_textures.widget_data[
 			obj_list_textures.widget_data_selected
 		]
-	).specular = obj_slider_specular_tex.widget_value
+	);
+	
+	tex.specular = obj_slider_specular_tex.widget_value
+	tex.specular_blur = to_range(
+		obj_slider_shininess_tex.widget_value,
+		global.shininess_min,
+		global.shininess_max
+	)
 }
 
 if global.tile_object_selected != -1 {
