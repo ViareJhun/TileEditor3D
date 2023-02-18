@@ -45,6 +45,11 @@ function tile_load(fname) {
 		temp.specular = spec_value
 		temp.specular_blur = spec_blur
 		obj_slider_specular.widget_value = spec_value
+		obj_slider_shininess.widget_value = from_range(
+			spec_blur,
+			global.shininess_min,
+			global.shininess_max
+		)
 		
 		if is_main {
 			global.tile_tex_path = tex_path

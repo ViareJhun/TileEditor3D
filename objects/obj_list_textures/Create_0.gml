@@ -8,7 +8,7 @@ list_create(
 			name
 		);
 		obj_slider_specular_tex.widget_value = tex.specular
-		obj_slider_specular_tex.widget_value = from_range(
+		obj_slider_shininess_tex.widget_value = from_range(
 			tex.specular_blur,
 			global.shininess_min,
 			global.shininess_max
