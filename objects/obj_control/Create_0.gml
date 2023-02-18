@@ -43,6 +43,11 @@ global.tile_object_x_start = 8
 global.tile_object_y_start = 8
 global.tile_object_z_start = 0
 
+global.tag_var_name = {}
+global.tag_var_name[$ "x"] = "tile_object_x_start"
+global.tag_var_name[$ "y"] = "tile_object_y_start"
+global.tag_var_name[$ "z"] = "tile_object_z_start"
+
 if (!variable_global_exists("vb_cube_16")) {
 	global.vb_cube_16 = vertex_create_buffer()
 	global.mesh_cube_16 = load_obj("cube16.obj")
