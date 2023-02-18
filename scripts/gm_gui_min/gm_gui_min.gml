@@ -249,12 +249,14 @@ function slider_draw() {
 	)
 	
 	draw_set_colour(widget_slider_color)
+	var value = widget_value;
+	value = clamp(value, 0, 1)
 	draw_rectangle(
 		widget_x + widget_offset + 
-		widget_value * widget_width_value - widget_offset,
+		value * widget_width_value - widget_offset,
 		widget_y,
 		widget_x + widget_offset + 
-		widget_value * widget_width_value + widget_offset,
+		value * widget_width_value + widget_offset,
 		widget_y + widget_height,
 		false
 	)

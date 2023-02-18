@@ -85,4 +85,6 @@ if global.tile_object_selected != -1 {
 			}
 		}
 	}
+	
+	entry_position_update(trans)
 }

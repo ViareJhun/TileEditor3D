@@ -1,5 +1,69 @@
 /// @description init
 
+global.string_digits_real = function(source) {
+	if (string_length(source) == 0) {
+		return 0
+	}
+	
+	var before_dot = "";
+	var after_dot = "";
+	var is_after_dot = false;
+	var count = string_length(source);
+	
+	for (var i = 1; i <= count; i ++) {
+		var c = string_char_at(source, i);
+		
+		if (c == ".") {
+			is_after_dot = true	
+		} else {
+			if (is_after_dot) {
+				after_dot += string_digits(c)
+			} else {
+				before_dot += string_digits(c)
+			}
+		}
+	}
+	
+	if (string_length(before_dot) == 0) {
+		return 0
+	}
+	if (is_after_dot) {
+		if (string_length(after_dot) == 0) {
+			return 0
+		}
+		
+		return (
+			real(before_dot) +
+			real(after_dot) / power(10, string_length(after_dot))
+		)
+	} else {
+		return real(before_dot)
+	}
+}
+
+function entry_position_update(trans) {
+	with obj_entry_position {
+		if (!widget_entry_selected) {
+			widget_entry_text = string(
+				variable_struct_get(
+					trans,
+					tag
+				)
+			)
+		} else {
+			var value = global.string_digits_real(widget_entry_text);
+			
+			variable_struct_set(
+				trans,
+				tag,
+				value
+			)
+			
+			with obj_editor slider_transform_update(trans)
+		}
+	}
+}
+
 function slider_transform_update(trans) {
 	with obj_slider_transformations {
 		switch tag {

@@ -37,6 +37,7 @@
     {"id":{"name":"obj_control","path":"objects/obj_control/obj_control.yy",},"order":2,},
     {"id":{"name":"obj_button_add_texture","path":"objects/obj_button_add_texture/obj_button_add_texture.yy",},"order":0,},
     {"id":{"name":"obj_button_state_load","path":"objects/obj_button_state_load/obj_button_state_load.yy",},"order":4,},
+    {"id":{"name":"obj_entry_position","path":"objects/obj_entry_position/obj_entry_position.yy",},"order":12,},
     {"id":{"name":"obj_button_scale_default","path":"objects/obj_button_scale_default/obj_button_scale_default.yy",},"order":11,},
     {"id":{"name":"state_reset","path":"scripts/state_reset/state_reset.yy",},"order":0,},
     {"id":{"name":"obj_button_to_center","path":"objects/obj_button_to_center/obj_button_to_center.yy",},"order":4,},
